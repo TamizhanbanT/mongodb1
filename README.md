@@ -1,2 +1,10 @@
-# mongodb1
-mongodb queries
+1) db.items.find()
+2) db.items.find({$and:[{"product_price":{"$gt":400}},{"product_price":{"$lt":800}}]}).pretty()
+3)db.items.find({product_price: { $not: {   $gte: 400,   $lte: 600 }}})
+4)db.items.find({ "product_price":{$gte:500}}).pretty()
+5) db.items.find({},{ "product_name":1,"product_material":1}).pretty()
+6)db.items.findOne({"id": "10"})
+7) db.items.find({},{"_id:0, "product_name":1,"product_material":1}).pretty()
+8) db.items.find({"product_material":"Soft"}).pretty()
+9)db.items.find({$or:[{"product_color": "indigo"},{"product_price": 492.00}]})
+
